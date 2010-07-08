@@ -43,6 +43,7 @@
         <style id="operator"        _name="Operator"                 map-to="def:special-char"/>
         <style id="keyword"         _name="Keyword"                  map-to="def:keyword"/>
         <style id="assessor"        _name="assessor"                 map-to="def:identifier"/>
+        <style id="regexp"          _name="regexp"                 map-to="def:identifier"/>
         <style id="function"        _name="Function"                 map-to="def:function"/>
         <style id="constructors"    _name="Constructors"             map-to="def:type"/>
     </styles>
@@ -62,11 +63,15 @@
                 </context>
 
                 <context id="block-comment" style-ref="comment" class="comment" class-disabled="no-spell-check">
-                    <start>###</start>
+                    <start>###(?!#)[ \t]*\n</start>
                     <end>###</end>
                     <include>
                         <context ref="def:in-comment"/>
                     </include>
+                </context>
+
+                <context id="regexp" style-ref="regexp">
+                    <match>(?&lt;!\d)\s*/(?![\s/*+{}?]).*/[igmy]*</match>
                 </context>
 
                 <!-- Strings -->
@@ -97,9 +102,18 @@
                     </include>
                 </context>
 
-                <context id="string-heredocs" style-ref="string" class="string" class-disabled="no-spell-check">
+                <context id="string-heredocs-single" style-ref="string" class="string" class-disabled="no-spell-check">
                     <start>'''</start>
                     <end>'''</end>
+                    <include>
+                        <context ref="def:line-continue"/>
+                        <context ref="def:escape"/>
+                    </include>
+                </context>
+
+                <context id="string-heredocs-double" style-ref="string" class="string" class-disabled="no-spell-check">
+                    <start>"""</start>
+                    <end>"""</end>
                     <include>
                         <context ref="def:line-continue"/>
                         <context ref="def:escape"/>
@@ -157,9 +171,6 @@
                     <keyword>or</keyword>
                     <keyword>in</keyword>
                     <keyword>of</keyword>
-                    <keyword>by</keyword>
-                    <keyword>by</keyword>
-                    <keyword>by</keyword>
                     <keyword>by</keyword>
                 </context>
 
