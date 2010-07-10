@@ -49,11 +49,11 @@
     </styles>
 
     <definitions>
-        <context id="coffee" class="no-spell-check">
+        <context id="coffee">
             <include>
 
                 <!-- Comments -->
-                <context id="line-comment" style-ref="comment" class="comment" class-disabled="no-spell-check">
+                <context id="line-comment" style-ref="comment">
                     <start>#[^#]</start>
                     <end>$</end>
                     <include>
@@ -62,7 +62,7 @@
                     </include>
                 </context>
 
-                <context id="block-comment" style-ref="comment" class="comment" class-disabled="no-spell-check">
+                <context id="block-comment" style-ref="comment">
                     <start>###(?!#)[ \t]*\n</start>
                     <end>###</end>
                     <include>
@@ -75,7 +75,7 @@
                 </context>
 
                 <!-- Strings -->
-                <context id="string-double" style-ref="string" class="string" class-disabled="no-spell-check">
+                <context id="string-double" style-ref="string">
                     <start>"</start>
                     <end>"</end>
                     <include>
@@ -84,7 +84,7 @@
                     </include>
                 </context>
 
-                <context id="string-single" style-ref="string" class="string" class-disabled="no-spell-check">
+                <context id="string-single" style-ref="string">
                     <start>'</start>
                     <end>'</end>
                     <include>
@@ -93,7 +93,7 @@
                     </include>
                 </context>
 
-                <context id="string-javascript" style-ref="string" class="string" class-disabled="no-spell-check">
+                <context id="string-javascript" style-ref="string">
                     <start>`</start>
                     <end>`</end>
                     <include>
@@ -102,7 +102,7 @@
                     </include>
                 </context>
 
-                <context id="string-heredocs-single" style-ref="string" class="string" class-disabled="no-spell-check">
+                <context id="string-heredocs-single" style-ref="string">
                     <start>'''</start>
                     <end>'''</end>
                     <include>
@@ -111,7 +111,7 @@
                     </include>
                 </context>
 
-                <context id="string-heredocs-double" style-ref="string" class="string" class-disabled="no-spell-check">
+                <context id="string-heredocs-double" style-ref="string">
                     <start>"""</start>
                     <end>"""</end>
                     <include>
