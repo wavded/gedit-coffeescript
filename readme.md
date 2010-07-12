@@ -9,3 +9,4 @@ This project adds [CoffeeScript] syntax highlighting to the gedit text editor.
 
 2. Run gedit and open a CoffeeScript file or Cakefile.
 
+Patches and improvements welcome!
