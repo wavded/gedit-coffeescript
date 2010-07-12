@@ -63,7 +63,7 @@
                 </context>
 
                 <context id="block-comment" style-ref="comment">
-                    <start>###(?!#)[ \t]*\n</start>
+                    <start>###</start>
                     <end>###</end>
                     <include>
                         <context ref="def:in-comment"/>
