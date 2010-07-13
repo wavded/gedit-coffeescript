@@ -42,8 +42,8 @@
         <style id="exception"       _name="Exception"                map-to="def:error"/>
         <style id="operator"        _name="Operator"                 map-to="def:special-char"/>
         <style id="keyword"         _name="Keyword"                  map-to="def:keyword"/>
-        <style id="assessor"        _name="assessor"                 map-to="def:identifier"/>
-        <style id="regexp"          _name="regexp"                   map-to="def:identifier"/>
+        <style id="assessor"        _name="Assessor"                 map-to="def:identifier"/>
+        <style id="regexp"          _name="RegExp"                   map-to="def:special-char"/>
         <style id="function"        _name="Function"                 map-to="def:function"/>
         <style id="constructors"    _name="Constructors"             map-to="def:type"/>
     </styles>
@@ -79,8 +79,9 @@
                     <start>"</start>
                     <end>"</end>
                     <include>
-                        <context ref="def:line-continue"/>
-                        <context ref="def:escape"/>
+                        <context id="interpolation-string-double" style-ref="assessor" extend-parent="false">
+                            <match>\${[^}]+}</match>
+                        </context>
                     </include>
                 </context>
 
@@ -90,6 +91,9 @@
                     <include>
                         <context ref="def:line-continue"/>
                         <context ref="def:escape"/>
+                        <context id="interpolation-string-single" style-ref="assessor" extend-parent="false">
+                            <match>\${[^}]+}</match>
+                        </context>
                     </include>
                 </context>
 
@@ -108,6 +112,9 @@
                     <include>
                         <context ref="def:line-continue"/>
                         <context ref="def:escape"/>
+                        <context id="interpolation-heredocs-single" style-ref="assessor" extend-parent="false">
+                            <match>\${[^}]+}</match>
+                        </context>
                     </include>
                 </context>
 
@@ -117,6 +124,9 @@
                     <include>
                         <context ref="def:line-continue"/>
                         <context ref="def:escape"/>
+                        <context id="interpolation-heredocs-double" style-ref="assessor" extend-parent="false">
+                            <match>\${[^}]+}</match>
+                        </context>
                     </include>
                 </context>
 
