@@ -43,7 +43,7 @@
         <style id="operator"        _name="Operator"                 map-to="def:special-char"/>
         <style id="keyword"         _name="Keyword"                  map-to="def:keyword"/>
         <style id="assessor"        _name="assessor"                 map-to="def:identifier"/>
-        <style id="regexp"          _name="regexp"                 map-to="def:identifier"/>
+        <style id="regexp"          _name="regexp"                   map-to="def:identifier"/>
         <style id="function"        _name="Function"                 map-to="def:function"/>
         <style id="constructors"    _name="Constructors"             map-to="def:type"/>
     </styles>
@@ -172,10 +172,13 @@
                     <keyword>in</keyword>
                     <keyword>of</keyword>
                     <keyword>by</keyword>
+                    <keyword>is</keyword>
+                    <keyword>isnt</keyword>
+                    <keyword>not</keyword>
                 </context>
 
                 <context id="operator" style-ref="operator">
-                    <match>(::|:|&gt;=|&lt;=|&gt;|&lt;|!=|!|\?=|\?|-\>|=\>|\bis\b|\bisnt\b|\bnot\b|!=|=|==|\.\.\.|\.\.)</match>
+                    <match>(::|:|&gt;=|&lt;=|&gt;|&lt;|!=|!|\?=|\?|-\>|=\>|!=|=|==|\.\.\.|\.\.)</match>
                 </context>
 
                 <!-- Keywords -->
