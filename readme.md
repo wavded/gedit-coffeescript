@@ -13,3 +13,12 @@ Patches and improvements welcome!
 
 ![screenshot](http://github.com/wavded/gedit-coffeescript/raw/master/screenshot.png)
 
+### Extra: Install the Ruycius-Mod theme
+
+1. Download and place rubycius-mod.xml in `~/.local/share/gtksourceview-2.0/styles`
+    > Note: if those directories don't exist, make them and gedit will know what to do.
+
+2. Run gedit then Edit > Preferences > Fonts and Colors > Color Scheme > Rubycius-Mod
+
+3. I like using Liberation Mono for a base font as well which is available within the standard repo for many Linux distros.
+
