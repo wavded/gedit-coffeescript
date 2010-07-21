@@ -221,7 +221,7 @@
                 </context>
 
                 <context id="constructors" style-ref="constructors">
-                    <match>\b[A-Z][a-z0-9_]+\b</match>
+                    <match>\b[A-Z][A-Za-z0-9_]+\b(?!\.)</match>
                 </context>
 
             </include>
