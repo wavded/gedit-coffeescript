@@ -80,7 +80,7 @@
                     <end>"</end>
                     <include>
                         <context id="interpolation-string-double" style-ref="assessor" extend-parent="false">
-                            <match>\${[^}]+}</match>
+                            <match>\#{[^}]+}</match>
                         </context>
                     </include>
                 </context>
@@ -217,7 +217,7 @@
                 </context>
 
                 <context id="functions" style-ref="function">
-                    <keyword>\b[A-Za-z0-9_]+\b(?=: (\(|-\>|=\>))</keyword>
+                    <keyword>\b[A-Za-z0-9_]+\b(?=\s*?(=|:)\s*?(\(|-\>|=\>))</keyword>
                 </context>
 
                 <context id="constructors" style-ref="constructors">
