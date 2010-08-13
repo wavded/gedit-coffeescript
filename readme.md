@@ -1,4 +1,4 @@
-This project adds [CoffeeScript] syntax highlighting to the gedit text editor.
+This project adds [CoffeeScript] syntax highlighting to the gedit text editor. (and any other gtksourceview-2.0 compliant text editor)
 
 [CoffeeScript]: http://coffeescript.org
 
