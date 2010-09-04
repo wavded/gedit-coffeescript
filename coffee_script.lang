@@ -213,7 +213,7 @@
                 </context>
 
                 <context id="assessor" style-ref="assessor">
-                    <match>(@[^: ]+|this)</match>
+                    <match>(@([a-zA-Z\$_](\w|\$)*)|this)</match>
                 </context>
 
                 <context id="functions" style-ref="function">
