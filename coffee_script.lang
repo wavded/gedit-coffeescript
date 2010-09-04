@@ -40,7 +40,7 @@
         <style id="loop"            _name="Loop"                     map-to="def:keyword"/>
         <style id="conditional"     _name="Conditional"              map-to="def:keyword"/>
         <style id="exception"       _name="Exception"                map-to="def:error"/>
-        <style id="operator"        _name="Operator"                 map-to="def:special-char"/>
+        <style id="operator"        _name="Operator"                 map-to="def:keyword"/>
         <style id="keyword"         _name="Keyword"                  map-to="def:keyword"/>
         <style id="assessor"        _name="Assessor"                 map-to="def:identifier"/>
         <style id="regexp"          _name="RegExp"                   map-to="def:special-char"/>
@@ -188,7 +188,7 @@
                 </context>
 
                 <context id="operator" style-ref="operator">
-                    <match>(::|:|&gt;=|&lt;=|&gt;|&lt;|!=|!|\?=|\?|-\>|=\>|!=|=|==|\.\.\.|\.\.)</match>
+                    <match>(-[\-=>]?|\+[+=]?|[*&amp;|\/%=&lt;&gt;^:!?]+)([ \t]*)</match>
                 </context>
 
                 <!-- Keywords -->
