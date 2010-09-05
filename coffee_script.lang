@@ -54,7 +54,7 @@
 
                 <!-- Comments -->
                 <context id="line-comment" style-ref="comment">
-                    <start>#[^#]</start>
+                    <start>#([^#]|$)</start>
                     <end>$</end>
                     <include>
                         <context ref="def:line-continue"/>
