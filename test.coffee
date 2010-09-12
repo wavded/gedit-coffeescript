@@ -34,6 +34,16 @@ alert "I knew it!" if elvis?
 # Array comprehensions
 cubes = match.cube num for num in list
 
-# Constructors
-human = new Person
+# Class
+class Animal
+  constructor: (@name) ->
+
+  move: (meters) ->
+    alert @name + " moved " + meters + "m."
+
+bud = new Animal
+
+###
+Block Comments
+###
 
