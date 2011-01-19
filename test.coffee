@@ -15,6 +15,16 @@ matcher = /mymatch/g
 # Interpolation
 html = "And the number is #{number}"
 
+# Heredocs
+
+heredocs_double = """
+Hello "world" and 'world'
+"""
+
+heredocs_single = '''
+Hello 'world' and "world"
+'''
+
 # Arrays
 list = [1, 2, 3, 4, 5]
 

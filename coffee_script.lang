@@ -75,6 +75,30 @@
                 </context>
 
                 <!-- Strings -->
+                <context id="string-heredocs-single" style-ref="string">
+                    <start>'''</start>
+                    <end>'''</end>
+                    <include>
+                        <context ref="def:line-continue"/>
+                        <context ref="def:escape"/>
+                        <context id="interpolation-heredocs-single" style-ref="assessor" extend-parent="false">
+                            <match>\#{[^}]+}</match>
+                        </context>
+                    </include>
+                </context>
+
+                <context id="string-heredocs-double" style-ref="string">
+                    <start>"""</start>
+                    <end>"""</end>
+                    <include>
+                        <context ref="def:line-continue"/>
+                        <context ref="def:escape"/>
+                        <context id="interpolation-heredocs-double" style-ref="assessor" extend-parent="false">
+                            <match>\#{[^}]+}</match>
+                        </context>
+                    </include>
+                </context>
+                
                 <context id="string-double" style-ref="string">
                     <start>"</start>
                     <end>"</end>
@@ -92,7 +116,7 @@
                         <context ref="def:line-continue"/>
                         <context ref="def:escape"/>
                         <context id="interpolation-string-single" style-ref="assessor" extend-parent="false">
-                            <match>\${[^}]+}</match>
+                            <match>\#{[^}]+}</match>
                         </context>
                     </include>
                 </context>
@@ -106,29 +130,6 @@
                     </include>
                 </context>
 
-                <context id="string-heredocs-single" style-ref="string">
-                    <start>'''</start>
-                    <end>'''</end>
-                    <include>
-                        <context ref="def:line-continue"/>
-                        <context ref="def:escape"/>
-                        <context id="interpolation-heredocs-single" style-ref="assessor" extend-parent="false">
-                            <match>\${[^}]+}</match>
-                        </context>
-                    </include>
-                </context>
-
-                <context id="string-heredocs-double" style-ref="string">
-                    <start>"""</start>
-                    <end>"""</end>
-                    <include>
-                        <context ref="def:line-continue"/>
-                        <context ref="def:escape"/>
-                        <context id="interpolation-heredocs-double" style-ref="assessor" extend-parent="false">
-                            <match>\${[^}]+}</match>
-                        </context>
-                    </include>
-                </context>
 
                 <!-- Numbers -->
                 <context ref="def:float"/>
