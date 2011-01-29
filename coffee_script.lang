@@ -55,7 +55,7 @@
                 <!-- Comments -->
                 <context id="block-comment" style-ref="comment">
                     <start>^[ \t]*###([^#]|$)</start>
-                    <end>^[ \t]*###([^#]|$)</end>
+                    <end>^.*###([^#]|$)</end>
                     <include>
                         <context ref="def:in-comment"/>
                     </include>
@@ -183,7 +183,7 @@
                 </context>
 
                 <context id="operator" style-ref="operator">
-                    <match>(-[\-=>]?|\+[+=]?|[*&amp;|\/%=&lt;&gt;^:!?]+)([ \t]*)</match>
+                    <match>(-[\-=>]?|\+[+=]?|[*&amp;|\/%=&lt;&gt;^~:!?]+)([ \t]*)</match>
                 </context>
 
                 <!-- Keywords -->
@@ -223,4 +223,3 @@
         </context>
     </definitions>
 </language>
-
