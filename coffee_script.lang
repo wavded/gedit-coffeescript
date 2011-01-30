@@ -81,9 +81,6 @@
                     <include>
                         <context ref="def:line-continue"/>
                         <context ref="def:escape"/>
-                        <context id="interpolation-heredocs-single" style-ref="assessor" extend-parent="false">
-                            <match>\#{[^}]+}</match>
-                        </context>
                     </include>
                 </context>
 
@@ -115,9 +112,6 @@
                     <include>
                         <context ref="def:line-continue"/>
                         <context ref="def:escape"/>
-                        <context id="interpolation-string-single" style-ref="assessor" extend-parent="false">
-                            <match>\#{[^}]+}</match>
-                        </context>
                     </include>
                 </context>
 
