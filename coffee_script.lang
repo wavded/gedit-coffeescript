@@ -95,7 +95,7 @@
                         </context>
                     </include>
                 </context>
-                
+
                 <context id="string-double" style-ref="string">
                     <start>"</start>
                     <end>"</end>
