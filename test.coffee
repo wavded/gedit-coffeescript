@@ -19,11 +19,11 @@ html_single = 'This is not an #{interpolation}'
 # Heredocs
 
 heredocs_double = """
-Hello "world" and 'world'
+Hello "world" and 'world' and #{number}
 """
 
 heredocs_single = '''
-Hello 'world' and "world"
+Hello 'world' and "world" and not an #{interpolation}
 '''
 
 # Arrays
