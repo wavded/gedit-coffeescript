@@ -74,13 +74,13 @@
                 <context id="regexp" style-ref="regexp">
                     <match>(?&lt;!\d)\s*/(?![\s/*+{}?]).*/[igmy]*</match>
                 </context>
-                
+
                 <context id="heregex" style-ref="regexp">
-                    <start>///</start>
-                    <end>///</end>
+                    <start>\/\/\/</start>
+                    <end>\/\/\/</end>
                     <include>
                         <context ref="def:line-continue"/>
-                        <context ref="def:in-comment"/>
+                        <context ref="line-comment"/>
                     </include>
                 </context>
 
