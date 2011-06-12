@@ -45,6 +45,7 @@
         <style id="assessor"        _name="Assessor"                 map-to="def:identifier"/>
         <style id="regexp"          _name="RegExp"                   map-to="def:special-char"/>
         <style id="function"        _name="Function"                 map-to="def:function"/>
+        <style id="application"     _name="Application"              map-to="def:identifier"/>
         <style id="constructors"    _name="Constructors"             map-to="def:type"/>
     </styles>
 
@@ -219,7 +220,12 @@
                     <match>\b[A-Z][A-Za-z0-9_]+\b(?!\.)</match>
                 </context>
 
+                <context id="application" style-ref="application">
+                    <match>\b@?[A-Za-z0-9_]+((?=[(])|\s+(?=["'/({\[]|\$|\w|=>|-(!=)|@))</match>
+                </context>
+
             </include>
         </context>
     </definitions>
 </language>
+
