@@ -45,6 +45,7 @@
         <style id="assessor"        _name="Assessor"                 map-to="def:identifier"/>
         <style id="regexp"          _name="RegExp"                   map-to="def:special-char"/>
         <style id="function"        _name="Function"                 map-to="def:function"/>
+        <style id="application"     _name="Application"              map-to="def:identifier"/>
         <style id="constructors"    _name="Constructors"             map-to="def:type"/>
     </styles>
 
@@ -161,54 +162,54 @@
                     <keyword>off</keyword>
                 </context>
 
+                <define-regex id="statement-keyword" extended="true">
+                    \b(return|break|continue|throw)\b
+                </define-regex>
+
+                <define-regex id="loop-keyword" extended="true">
+                    \b(for(\s+own)?|while|until|loop)\b
+                </define-regex>
+
+                <define-regex id="conditional-keyword" extended="true">
+                    \b(if|else|unless|switch|when|then|and|or|in|of|by|is|isnt|
+                    not)\b
+                </define-regex>
+
+                <define-regex id="keywords-keyword" extended="true">
+                    \b(instanceof|typeof|delete|new|where|class|extends|super|
+                    try|catch|finally)\b
+                </define-regex>
+
+                <define-regex id="operator-regex" extended="true">
+                    (-[\-=>]?|\+[+=]?|[*&amp;|\/%=&lt;&gt;^~:!?]+)
+                </define-regex>
+
+                <define-regex id="novalue-keywords" extended="true">
+                    \%{statement-keyword}|
+                    \%{loop-keyword}|
+                    \%{conditional-keyword}|
+                    \%{keywords-keyword}
+                </define-regex>
+
                 <context id="statement" style-ref="statement">
-                    <keyword>return</keyword>
-                    <keyword>break</keyword>
-                    <keyword>continue</keyword>
-                    <keyword>throw</keyword>
+                    <match>\%{statement-keyword}</match>
                 </context>
 
                 <context id="loop" style-ref="loop">
-                    <keyword>for</keyword>
-                    <keyword>while</keyword>
-                    <keyword>until</keyword>
-                    <keyword>loop</keyword>
+                    <match>\%{loop-keyword}</match>
                 </context>
 
                 <context id="conditional" style-ref="conditional">
-                    <keyword>if</keyword>
-                    <keyword>else</keyword>
-                    <keyword>unless</keyword>
-                    <keyword>switch</keyword>
-                    <keyword>when</keyword>
-                    <keyword>then</keyword>
-                    <keyword>and</keyword>
-                    <keyword>or</keyword>
-                    <keyword>in</keyword>
-                    <keyword>of</keyword>
-                    <keyword>by</keyword>
-                    <keyword>is</keyword>
-                    <keyword>isnt</keyword>
-                    <keyword>not</keyword>
+                    <match>\%{conditional-keyword}</match>
                 </context>
 
                 <context id="operator" style-ref="operator">
-                    <match>(-[\-=>]?|\+[+=]?|[*&amp;|\/%=&lt;&gt;^~:!?]+)([ \t]*)</match>
+                    <match>\%{operator-regex}([ \t]*)</match>
                 </context>
 
                 <!-- Keywords -->
                 <context id="keywords" style-ref="keyword">
-                    <keyword>instanceof</keyword>
-                    <keyword>typeof</keyword>
-                    <keyword>delete</keyword>
-                    <keyword>new</keyword>
-                    <keyword>where</keyword>
-                    <keyword>class</keyword>
-                    <keyword>extends</keyword>
-                    <keyword>super</keyword>
-                    <keyword>try</keyword>
-                    <keyword>catch</keyword>
-                    <keyword>finally</keyword>
+                    <match>\%{keywords-keyword}</match>
                 </context>
 
                 <context id="exception" style-ref="exception">
@@ -229,7 +230,22 @@
                     <match>\b[A-Z][A-Za-z0-9_]+\b(?!\.)</match>
                 </context>
 
+                <context id="application" style-ref="application">
+                    <match extended="true">
+                    \b @? [A-Za-z0-9_]+ (
+                        (?= [(]) |
+                        \s+ (
+                            (?= =>) |
+                            (?=\S)(?!
+                                \%{novalue-keywords} | [\])}=:,#] |
+                                [-+*/]= | \%{operator-regex}\s )
+                        )
+                    )
+                    </match>
+                </context>
+
             </include>
         </context>
     </definitions>
 </language>
+
