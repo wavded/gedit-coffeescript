@@ -13,7 +13,7 @@ This project adds [CoffeeScript] syntax highlighting to the gedit text editor. (
 
 Patches and improvements welcome!
 
-![screenshot](http://wavded.github.com/gedit-coffeescript/screenshot.png)
+![screenshot](http://wavded.github.com/gedit-coffeescript/screenshot2.png)
 
 ### Extra: Install the Ruycius-Mod theme
 
