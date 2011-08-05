@@ -13,8 +13,8 @@ square = (x) -> x * x
 matcher = /mymatch/g
 
 # Interpolation
-html_double = "And the number is #{number}"
-html_single = 'This is not an #{interpolation}'
+html_double = "And the \" number is #{number}"
+html_single = 'This is \' not an #{interpolation}'
 
 # Heredocs
 
