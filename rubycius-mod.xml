@@ -28,7 +28,7 @@
   <style name="selection-unfocused"  foreground="#d9d59f" background="#180024" />
   <style name="cursor"               foreground="blanco" />
   <style name="secondary-cursor"     foreground="blanco" />
-  <style name="line-numbers"         foreground="#191919" background="gris" />
+  <style name="line-numbers"         foreground="#393939" background="gris" />
   <style name="current-line"         background="#232826" />
   <style name="search-match"         foreground="#242424" background="#fce94f" />
   <style name="bracket-match"        foreground="#eeeeec" background="#babdb6" bold="true" />
