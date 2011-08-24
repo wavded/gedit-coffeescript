@@ -68,3 +68,5 @@ OPERATOR = /// ^ (
    | \.{2,3}           # range or splat
 ) ///
 
+$('#id').click (e) ->
+$('#id').click -> 

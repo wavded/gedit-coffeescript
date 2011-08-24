@@ -237,7 +237,7 @@
                     \b @? [A-Za-z0-9_]+ (
                         (?= [(]) |
                         \s+ (
-                            (?= =>) |
+                            (?= [=-]>) |
                             (?=\S)(?!
                                 \%{novalue-keywords} | [\])}=:,#] |
                                 [-+*/]= | \%{operator-regex}\s )
@@ -245,7 +245,6 @@
                     )
                     </match>
                 </context>
-
             </include>
         </context>
     </definitions>
