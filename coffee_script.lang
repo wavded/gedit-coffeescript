@@ -225,7 +225,7 @@
                 </context>
 
                 <context id="functions" style-ref="function">
-                    <keyword>\b\w+\b(?=\s*(=|:)\s*(\([\w,\s]*\))?\s*(-\>|=\>))</keyword>
+                    <keyword>\b\w+\b(?=\s*(=|:)\s*(\([\w,\s@=\[\]\{\}.]*\))?\s*(-\>|=\>))</keyword>
                 </context>
 
                 <context id="constructors" style-ref="constructors">
