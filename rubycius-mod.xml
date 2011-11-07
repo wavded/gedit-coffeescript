@@ -59,13 +59,13 @@
   <style name="def:floating-point"			use-style="def:number"/>
   <style name="def:complex"                 foreground="verde"/>
   <style name="def:net-address-in-comment"  foreground="azul" italic="true" underline="true"/>
-  <style name="def:note"                    foreground="blanco" background="blanco" bold="true"/>
+  <style name="def:note"                    foreground="negro" background="blanco" bold="true"/>
   <style name="def:error"                   background="rojo" bold="true"/>
   <style name="def:escape"                  foreground="#72c654"/>
   <style name="def:shebang"                 foreground="blanco" bold="true"/>
   <style name="def:doc-comment-element"     italic="true"/>
   <style name="def:builtin"					foreground="verde_medio" bold="true"/>
-  <style name="def:specials"                foreground="blanco" background="blanco"/>
+  <style name="def:specials"                foreground="negro" background="blanco"/>
   <style name="def:boolean"                 foreground="azul_bajo" bold="true"/>
   <style name="def:constant"                foreground="blanco"/>
   <style name="def:special-constant"        foreground="blanco" bold="true"/>
