@@ -71,3 +71,6 @@ OPERATOR = /// ^ (
 
 $('#id').click (e) ->
 $('#id').click -> 
+
+camel_cased_word.gsub /\.hello\/hi/, '/'
+a = 'This is some string'

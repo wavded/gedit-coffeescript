@@ -73,7 +73,7 @@
 
                 <!-- Regexps -->
                 <context id="regexp" style-ref="regexp">
-                    <match>(?&lt;!\d)\s*/(?![\s/*+{}?]).*/[igmy]*</match>
+                    <match>(?&lt;!\d)\s*/(?![\s/*+{}?]).*?[^\\]/[igmy]*</match>
                 </context>
 
                 <context id="heregex" style-ref="regexp">
