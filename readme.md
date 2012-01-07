@@ -8,7 +8,7 @@ This project adds [CoffeeScript] syntax highlighting to the gedit text editor. (
 
     > Note: if those directories don't exist, make them and gedit will know what to do.
     > **Important:** if you are using GTK3 (e.g. Gnome Shell) use `gtksourceview-3.0` folder instead of 2.0
-    > and change the `version="2.0"` attribute at the top of the file to `version="3.0"`.
+    > ( you may also need to change the `version="2.0"` attribute at the top of the file to `version="3.0" )`.
 
 2. Run gedit and open a CoffeeScript file or Cakefile.
 
