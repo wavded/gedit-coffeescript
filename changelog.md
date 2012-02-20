@@ -1,4 +1,11 @@
 
+1.0.3 / 2012-02-20 
+==================
+
+  * fixed; Inline multi-line comments not correct GH #21
+  * fixed; Regex bug Fixes #17
+  * added; *.coffee.erb as valid CS file Fixes #20
+
 1.0.2 / 2011-11-07 
 ==================
 
