@@ -56,7 +56,7 @@
                 <!-- Comments -->
                 <context id="block-comment" style-ref="comment">
                     <start>^[ \t]*###([^#]|$)</start>
-                    <end>^.*###([^#]|$)</end>
+                    <end>.*###([^#]|$)</end>
                     <include>
                         <context ref="def:in-comment"/>
                     </include>

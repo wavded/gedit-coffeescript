@@ -58,6 +58,8 @@ bud = new Animal
 FIXME
 Comments ###
 
+### Single Line Comment ###
+
 # Heregex
 OPERATOR = /// ^ (
   ?: [-=]>             # function
