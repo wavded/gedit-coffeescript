@@ -47,7 +47,7 @@ cubes = match.cube num for num in list
 
 # Class
 class Animal
-  constructor: (@name) ->
+  constructor: (@name = '') ->
 
   move: (meters) ->
     alert @name + " moved " + meters + "m."
