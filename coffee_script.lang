@@ -22,14 +22,15 @@
 -->
 <language id="coffee" _name="CoffeeScript" version="2.0" _section="Scripts">
     <metadata>
-        <property name="mimetypes">application/coffeescript;text/coffeescript;application/cakefile;text/cakefile;</property>
-        <property name="globs">*.coffee;Cakefile;*.Cakefile;*.coffee.erb</property>
+        <property name="mimetypes">application/coffeescript;text/coffeescript;application/cakefile;text/cakefile;application/icedcoffeescript;text/icedcoffeescript</property>
+        <property name="globs">*.coffee;Cakefile;*.Cakefile;*.coffee.erb;*.iced;*.iced.erb</property>
         <property name="line-comment-start">#</property>
         <property name="block-comment-start">###</property>
         <property name="block-comment-end">###</property>
     </metadata>
 
     <styles>
+        <style id="await"           _name="Async Wait"               map-to="def:keyword"/>
         <style id="comment"         _name="Comment"                  map-to="def:comment"/>
         <style id="error"           _name="Error"                    map-to="def:error"/>
         <style id="string"          _name="String"                   map-to="def:string"/>
@@ -52,6 +53,11 @@
     <definitions>
         <context id="coffee">
             <include>
+
+                <context id="await" style-ref="await">
+                    <keyword>await</keyword>
+                    <keyword>defer</keyword>
+                </context>
 
                 <!-- Comments -->
                 <context id="block-comment" style-ref="comment">
