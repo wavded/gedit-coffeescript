@@ -76,3 +76,6 @@ $('#id').click ->
 
 camel_cased_word.gsub /\.hello\/hi/, '/'
 a = 'This is some string'
+
+# Async control from IcedCoffeeScript variation
+await someAsyncFunction 'param', defer response
