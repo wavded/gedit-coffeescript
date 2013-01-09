@@ -27,7 +27,7 @@
 	</metadata>
 	<definitions>
 		<context id="coffee-block" class="no-spell-check" end-at-line-end="true">
-			<start><![CDATA[^( {4,}|\t{1,})]]></start>
+			<start><![CDATA[^ {4,}]]></start>
 			<include>
 				<context ref="coffee:coffee"/>
 			</include>
