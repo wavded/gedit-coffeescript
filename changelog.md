@@ -1,4 +1,13 @@
 
+1.0.4 / 2013-02-25 
+==================
+
+  * updated; relaxed the strict character requirements for function parameters
+  * updated; readme to GTK3 as default
+  * added; right margin property
+  * added; recognize litcoffee file types #27
+  * added; IcedCoffeescript keywords
+
 1.0.3 / 2012-02-20 
 ==================
 
