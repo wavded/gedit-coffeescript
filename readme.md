@@ -4,10 +4,7 @@ This project adds [CoffeeScript] syntax highlighting to the gedit text editor. (
 
 ### Installation and Use
 
-1. Download and place coffee_script.lang in `~/.local/share/gtksourceview-3.0/language-specs`
-
-    > Note: if those directories don't exist, make them and gedit will know what to do.
-    > **Important:** if you are using GTK2 (e.g. old Gnome) use `gtksourceview-2.0/language-specs` folder instead of 3.0.
+1. Download and execute install.sh
 
 2. Run gedit and open a CoffeeScript file, Cakefile, or IcedCoffeeScript file.
 
