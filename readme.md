@@ -2,6 +2,10 @@ This project adds [CoffeeScript] syntax highlighting to the gedit text editor. (
 
 [CoffeeScript]: http://coffeescript.org
 
+### Easy Installation
+
+Clone and execute install.sh.
+
 ### Installation and Use
 
 1. Download and place coffee_script.lang in `~/.local/share/gtksourceview-3.0/language-specs`
