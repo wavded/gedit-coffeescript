@@ -4,7 +4,7 @@ This project adds [CoffeeScript] syntax highlighting to the gedit text editor. (
 
 ### Easy Installation
 
-Clone and execute install.sh.
+Clone and execute `install.sh`.
 
 ### Installation and Use
 
