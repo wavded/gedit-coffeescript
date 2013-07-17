@@ -11,6 +11,7 @@ square = (x) -> x * x
 
 # RegExp
 matcher = /mymatch/g
+matcher2 = url.match(///^([^?#]*)([^#]*)(.*)$///)
 
 # Interpolation
 html_double = "And the \" number is #{number}"
@@ -68,7 +69,7 @@ OPERATOR = /// ^ (
    | ([-+:])\1         # doubles
    | ([&|<>])\2=?      # logic / shift
    | \?\.              # soak access
-   | \.{2,3}           # range or splat
+   | \.{2,3}#          # range or splat
 ) ///
 
 $('#id').click (e) ->

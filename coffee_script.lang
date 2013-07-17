@@ -77,6 +77,15 @@
                     </include>
                 </context>
 
+		<context id="regex-line-comment" style-ref="comment">
+                    <start> #</start>
+                    <end>$</end>
+                    <include>
+                        <context ref="def:line-continue"/>
+                        <context ref="def:in-comment"/>
+                    </include>
+                </context>
+
                 <!-- Regexps -->
                 <context id="regexp" style-ref="regexp">
                     <match>(?&lt;!\d)\s*/(?![\s/*+{}?]).*?[^\\]/[igmy]*</match>
@@ -87,7 +96,7 @@
                     <end>\/\/\/</end>
                     <include>
                         <context ref="def:line-continue"/>
-                        <context ref="line-comment"/>
+                        <context ref="regex-line-comment"/>
                     </include>
                 </context>
 
