@@ -8,10 +8,10 @@ Clone and execute `install.sh`.
 
 ### Installation and Use
 
-1. Download and place coffee_script.lang in `~/.local/share/gtksourceview-3.0/language-specs`
+1. Download and place coffee_script.lang in `~/.local/share/gtksourceview-4/language-specs`
 
     > Note: if those directories don't exist, make them and gedit will know what to do.
-    > **Important:** if you are using GTK2 (e.g. old Gnome) use `gtksourceview-2.0/language-specs` folder instead of 3.0.
+    > **Important:** if you are using GTK3 (e.g. old Gnome) use `gtksourceview-3.0/language-specs` folder instead of 4.
 
 2. Run gedit and open a CoffeeScript file, Cakefile, or IcedCoffeeScript file.
 
@@ -21,10 +21,10 @@ Patches and improvements welcome!
 
 ### Extra: Install the Ruycius-Mod theme
 
-1. Download and place rubycius-mod.xml in `~/.local/share/gtksourceview-3.0/styles`
+1. Download and place rubycius-mod.xml in `~/.local/share/gtksourceview-4/styles`
 
     > Note: if those directories don't exist, make them and gedit will know what to do.
-    > **Important:** if you are using GTK2 (e.g. old Gnome) use `gtksourceview-2.0/styles` folder instead of 3.0.
+    > **Important:** if you are using GTK3 (e.g. old Gnome) use `gtksourceview-3.0/styles` folder instead of 4.
 
 2. Run gedit then Edit > Preferences > Fonts and Colors > Color Scheme > Rubycius-Mod
 
